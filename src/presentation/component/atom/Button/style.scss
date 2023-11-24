@@ -1,0 +1,42 @@
+@import "../../../../core/style/App.scss";
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 24px;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  @include font-size(18);
+  font-weight: 800;
+  color: color(white);
+  background-color: transparent;
+  &--primary {
+    background-color: color(primary);
+    padding: 25px 72px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: color(white);
+      color: color(primary);
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 5px 0 rgba(75, 93, 104, 0.1);
+      transform: translateY(-4px);
+    }
+  }
+  &--secondary {
+    background-color: color(white);
+    border: solid 1px color(primary);
+    border-radius: 8px;
+    color: color(primary);
+    min-width: 200px;
+    font-weight: fw(semi-bold);
+    &:hover {
+      background-color: color(primary);
+      color: color(white);
+    }
+  }
+  // btn-dots prev
+}

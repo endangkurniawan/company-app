@@ -1,0 +1,208 @@
+React
+
+ReactJs 1 & 2
+
+Objective
+
+- Menambah skill front end dev di level intermediate (done)
+- Memahami pembuatan website dengan ReactJs (done)
+- Memahami cara membuat component state less ataupun state full (done)
+- Memahami cara membuat function helper/ utils (done)
+- Memahami cara membuat routing
+- Memahami cara membuat pages
+
+- Memahami cara membuat global style/variabel
+- Memahami cara membuat template
+- Memahami cara membuat hooks
+- Memahami cara integrasi dengan API
+- Memahami stage management (Redux, React Contact, Zustand)
+- Membuat 1 website dengan ReactJs, minimal 1 landing page
+
+Key Result
+
+- Mempelajari ReactJs
+- Mempelajari cara membuat component
+- Mempelajari cara membuat function helper/ utils
+- Mempelajari membuat routing
+- Mempelajari membuat pages
+- Mempelajari cara integrasi dengan API
+- Praktek membuat website dengan ReactJS
+
+Getting started ReactJs
+——
+
+Reusable component (bisa dipake berulang)
+react itu bisa dipake berulang
+
+Prerequisite
+
+- Harus paham Basic Front end Dev (HTML, CSS, JS)
+- Install nodeJs (include npm / install yarn) -> package manager
+- Install Npm
+  $sudo npm install -g n
+- Stable version
+  $sudo n stable
+
+Next Step
+——
+
+- Perlu diperhatikan version nodeJs
+  $ node -v /_check version NodeJs_/
+  $ npm -v /_check version npm_/
+
+- Tools create-react-app (https://create-react-app.dev/docs/getting-started) -> pastikan version npm 5.2 +
+
+Quick Start (Open terminal)
+——
+
+1. Create Project
+
+- $ npx create-react-app react-js (name-application) /_with npx_/
+- $ npm init react-app react-js /_with npm_/
+- $ yarn create react-app react-js /_with yarn_/ 2. Masuk directory projects
+  $ cd name-projects
+
+3. Remove Default Git
+
+- $ rm -rf .gitnone
+
+4. Running Projects
+   $ npm start
+   Or
+   $ npm run start
+
+Perbedaan Jsx and js
+——
+
+- Jsx
+  artinya jsnya ada return element/ component
+- Js
+  artinya jsnya tidak return element/ component, isinya fungsi js biasa
+
+Distructering
+——
+const NewsCardItem = (props) => {
+console.log("props", props);
+
+const { image, date, title, desc } = props;
+}
+
+Fragment
+——
+
+di react tidak boleh lebih dari 1 element, pasti eror, caranya harus pake fragment
+
+return (
+<>
+</>
+
+or
+
+  <div>
+  </div>
+)
+
+Dependence and devDepedence
+Paket yg dibutuhkan dalam project
+
+Devdendencies (development projects)
+Sekedar buat development doang (missal eslint)
+
+Depdedencies
+Harus ada
+
+Fe Architecture 2
+——
+
+Overview
+Why ?
+
+Objects
+
+- Memahami Structure directory FE
+- Memahami Fungsi-fungsi directory
+- Memahami konsep clean architecture
+- Memahami konsep atomic design
+- Project termanage dengan baik
+
+Key Result
+
+- Memepelajari Structure directory FE
+- Mempelajari Fungsi-fungsi directory
+- Mempelajari konsep clean architecture
+- Mempelajari konsep atomic design
+
+Membuat component state less ataupun state full
+——
+
+State Less
+
+State Full
+
+Install dulu routes di terminal
+
+Js. Pure js
+Jsx js nge return elements html
+
+Rule react js harus di dalam 1 parent
+
+Shorthand
+
+// 13 Agustus 2023
+
+## Front-end Architecture
+
+Clean Architecture + Atomic Design
+
+Clean Architecture : Integrasi
+Atomic Design : Atomic Design
+
+js-config.json (biar ga mundur-mundur)
+
+spreed operator
+{...}
+{...props}
+
+<!-- state -->
+
+const [stateName, methodeStateName]
+state name
+metode state name
+
+useEffect
+
+- akan kepanggil ketika pertama kali di load dan akan kepanggil ketika devedencinya
+- mendengarkan perubahn yang diubah
+
+util
+
+- penamaan folder camel case
+
+routes
+
+- perlu install react-router-dom
+
+harus menggunakan Link buat routing biar ga load(muter)
+
+<!-- card -->
+
+const NewsCardItem = (props) => {
+console.log("props", props);
+
+const { image, date, title, desc } = props;
+return (
+<div className="news-card__item">
+<div className="news-card__img">
+<img src={image} alt={title} />
+</div>
+<div className="news-card__txt">
+<p className="news-card__date">{date}</p>
+<h3 className="news-card__title">{title}</h3>
+<p className="news-card__desc">{desc}</p>
+{/_ <a href="#">Selengkapnya</a> _/}
+</div>
+</div>
+);
+};
+
+export default NewsCardItem;
